@@ -4,14 +4,13 @@ Github Commit Badge
 This badge/banner can be used for displaying the latest (or a specific 
 commit) for a github-project on your website.
 
+The original looks like this:
+
 <div><img src="http://hackvalue.de/heipei/wp-content/gallery/screenshots/github-commit-badge.png"></div>
 
-It is implemented in JavaScript, therefore it is completely client-based.
-Since this is the first time I've actually used JavaScript, the first 
-time I actually wrote a CSS from scratch expect things to be buggy.
+This particular fork looks like this:
 
-That said I'd be happy about ideas/patches. Look at the BUGS file or the 
-TODO or come up with something own.
+<div><img src="http://i134.photobucket.com/albums/q100/presidentbeef/badge-ss.png"></div>
 
 Usage
 =====
