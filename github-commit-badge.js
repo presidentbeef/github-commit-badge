@@ -179,5 +179,5 @@ myHead = document.getElementsByTagName("head")[0];
 myCSS = document.createElement("link");
 myCSS.setAttribute("rel","stylesheet");
 myCSS.setAttribute("type","text/css");
-myCSS.setAttribute("href",this.path + "../style/git-badge.css");
+myCSS.setAttribute("href",this.path + "./style.css");
 myHead.appendChild(myCSS);
