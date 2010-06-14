@@ -21,8 +21,6 @@ div.github-commit-badge-username {
 	padding-left: 18px;
 	color: yellow;
 	font-weight: bold;
-	background-image:url(img/public.png);
-	background-repeat: no-repeat;
 	background-position: 0px 1px;
 }
 
@@ -36,9 +34,6 @@ div.github-commit-badge-commitmessage {
 	padding-left: 90px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	background-image:url(img/commit.png);
-	background-repeat: no-repeat;
-	background-position: 70px 0px;
 }
 
 div.github-commit-badge-diffstat {
