@@ -12,7 +12,7 @@ function truncate(string, length, truncation) {
 };
 
 function parseDate(dateTime) {	// thanks to lachlanhardy
-	var timeZone = 1;	// TODO: This doesn't really work
+	var timeZone = 0;	// TODO: This doesn't really work
 
 	dateTime = dateTime.substring(0,19) + "Z";
 	var theirTime = dateTime.substring(11,13);
@@ -41,12 +41,6 @@ jQuery.getJSON("http://github.com/api/v1/json/" + badgeData["username"] + "/" + 
 		// the username/repo
 		var myUserRepo = document.createElement("div");
 		myUserRepo.setAttribute("class","github-commit-badge-username");
-
-		var myLink = document.createElement("a");
-		myLink.setAttribute("href","http://github.com/" + myUser + "/" + myRepo);
-		myLink.setAttribute("class","github-commit-badge-username");
-		myLink.appendChild(document.createTextNode(myUser + "/" + myRepo));
-		myUserRepo.appendChild(myLink);
 
 		// myDiffLine is the "foo committed xy on date" line 
 		var myDiffLine = document.createElement("div");
@@ -172,11 +166,7 @@ for (var i=0; i < myScriptsDefs.length; i++) {
 for (var i=0; i < myLibs.length; ++i) {
 	var myScript = document.createElement("script");
 	myScript.setAttribute("type","text/javascript");
-	if (document.URL.match(/^http/)) {	// only serve the gzipped lib if we're serving from http
-		myScript.setAttribute("src", this.path + "lib/" + myLibs[i] + ".jsgz");
-	} else {
-		myScript.setAttribute("src", this.path + "lib/" + myLibs[i] + ".js");
-	};
+	myScript.setAttribute("src", this.path + "lib/" + myLibs[i] + ".js");
 	if (i == myLibs.length-1) {	// only load our main function after the lib has finished loading
 		 //myScript.setAttribute("onload","mainpage();");
 		 document.getElementsByTagName("body")[0].setAttribute("onload","mainpage();");
@@ -189,5 +179,5 @@ myHead = document.getElementsByTagName("head")[0];
 myCSS = document.createElement("link");
 myCSS.setAttribute("rel","stylesheet");
 myCSS.setAttribute("type","text/css");
-myCSS.setAttribute("href",this.path + "style.css");
+myCSS.setAttribute("href",this.path + "../style/git-badge.css");
 myHead.appendChild(myCSS);
